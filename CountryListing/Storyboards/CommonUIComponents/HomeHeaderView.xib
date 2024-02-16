@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeHeaderView" customModule="CountryListing" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="cW2-w2-9Wm"/>
+                <outlet property="dateLabel" destination="Nwn-QH-Yq4" id="Gxy-af-aAX"/>
+                <outlet property="profileButton" destination="bpf-U2-6Xm" id="Zvv-5z-eKa"/>
+                <outlet property="titleLabel" destination="q3J-aY-4rS" id="A7f-cc-TLJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3J-aY-4rS">
+                    <rect key="frame" x="8" y="11.333333333333334" width="45" height="21.666666666666664"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="textColor" name="color_text_grey"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-QH-Yq4">
+                    <rect key="frame" x="177.33333333333334" y="13.666666666666664" width="35.333333333333343" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="color_text_grey"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpf-U2-6Xm">
+                    <rect key="frame" x="350" y="6" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bpf-U2-6Xm" secondAttribute="height" multiplier="1:1" id="PYt-w1-oUo"/>
+                        <constraint firstAttribute="width" constant="32" id="g9p-6r-cGt"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="profile"/>
+                    <connections>
+                        <action selector="didTapProfileButton:" destination="-1" eventType="touchUpInside" id="WMC-c6-pA4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="color_cell_background"/>
+            <constraints>
+                <constraint firstItem="q3J-aY-4rS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ALS-TU-oOb"/>
+                <constraint firstItem="Nwn-QH-Yq4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="N8C-8g-ewK"/>
+                <constraint firstItem="Nwn-QH-Yq4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q3J-aY-4rS" secondAttribute="trailing" constant="8" id="f10-EK-8gJ"/>
+                <constraint firstItem="q3J-aY-4rS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jQ6-J0-ksc"/>
+                <constraint firstItem="bpf-U2-6Xm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="l7W-FB-cXx"/>
+                <constraint firstAttribute="trailing" secondItem="bpf-U2-6Xm" secondAttribute="trailing" constant="8" id="rgn-VH-p4d"/>
+                <constraint firstItem="bpf-U2-6Xm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nwn-QH-Yq4" secondAttribute="trailing" constant="8" id="wtF-XR-JDL"/>
+                <constraint firstItem="Nwn-QH-Yq4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xOE-hp-60R"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="36.92307692307692" y="-243.8388625592417"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="profile" width="30" height="30"/>
+        <namedColor name="color_cell_background">
+            <color red="0.90980392156862744" green="0.79607843137254897" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_text_grey">
+            <color red="0.14901960784313725" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
