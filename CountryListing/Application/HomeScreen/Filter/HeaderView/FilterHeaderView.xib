@@ -25,18 +25,27 @@
                     <rect key="frame" x="0.0" y="0.0" width="390" height="75"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8Z-Yk-OgB">
-                            <rect key="frame" x="16" y="16" width="358" height="43"/>
+                            <rect key="frame" x="15.999999999999996" y="16" width="39.666666666666657" height="43"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" name="color_text_grey"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sort_filter" translatesAutoresizingMaskIntoConstraints="NO" id="gWq-WQ-LU5">
+                            <rect key="frame" x="354" y="27.666666666666671" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="M4O-uN-sza"/>
+                                <constraint firstAttribute="height" constant="20" id="YsS-cL-e5Y"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="M8Z-Yk-OgB" firstAttribute="leading" secondItem="VPM-iT-mIO" secondAttribute="leading" constant="16" id="BDg-Qf-8b8"/>
+                        <constraint firstAttribute="trailing" secondItem="gWq-WQ-LU5" secondAttribute="trailing" constant="16" id="K9E-DW-Bq2"/>
                         <constraint firstAttribute="bottom" secondItem="M8Z-Yk-OgB" secondAttribute="bottom" constant="16" id="mpi-ME-PEZ"/>
-                        <constraint firstAttribute="trailing" secondItem="M8Z-Yk-OgB" secondAttribute="trailing" constant="16" id="uGr-1u-JcW"/>
+                        <constraint firstItem="gWq-WQ-LU5" firstAttribute="centerY" secondItem="VPM-iT-mIO" secondAttribute="centerY" id="q55-at-0JW"/>
                         <constraint firstItem="M8Z-Yk-OgB" firstAttribute="top" secondItem="VPM-iT-mIO" secondAttribute="top" constant="16" id="utQ-Nk-mQL"/>
+                        <constraint firstItem="gWq-WQ-LU5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M8Z-Yk-OgB" secondAttribute="trailing" constant="16" id="wgx-1V-B3h"/>
                     </constraints>
                 </view>
             </subviews>
@@ -52,6 +61,7 @@
         </view>
     </objects>
     <resources>
+        <image name="sort_filter" width="30" height="30"/>
         <namedColor name="color_text_grey">
             <color red="0.14901960784313725" green="0.2196078431372549" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

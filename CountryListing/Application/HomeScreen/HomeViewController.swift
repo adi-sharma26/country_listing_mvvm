@@ -14,12 +14,20 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet private weak var searchView: SearchBarView!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView! {
+        didSet {
+            activityIndicator.color = .gray
+            activityIndicator.backgroundColor = .white
+            activityIndicator.tintColor = .black
+            activityIndicator.hidesWhenStopped = true
+        }
+    }
     
     // MARK: - Private Properties
     
     private var cancellables: Set<AnyCancellable> = []
     private var headerView: HomeHeaderView!
-    
+
     // MARK: - Public/Internal Properties
     
     var viewModel: HomeViewModel!
@@ -38,6 +46,10 @@ final class HomeViewController: UIViewController {
         
         searchView.delegate = self
         
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+                
         addCustomHeaderView()
         setupObservers()
         viewModel.onViewDidLoad()
@@ -54,6 +66,7 @@ final class HomeViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] countriesList in
                 self?.tableView.reloadData()
+                self?.activityIndicator.stopAnimating()
             }
             .store(in: &cancellables)
     }
